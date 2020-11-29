@@ -1,0 +1,16 @@
+{
+    "name": "adibe/php-firebase",
+    "description": "firebase connection with php",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "adibemohamed",
+            "email": "mr.eladib.mohamed@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "5.x-dev"
+    }
+}
