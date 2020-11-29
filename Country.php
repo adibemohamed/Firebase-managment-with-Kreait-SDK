@@ -50,12 +50,12 @@ class Country {
 }
 
 
-$users = new Users();
+$countries = new Country();
 
-var_dump($users->insert([
-   '1' => 'John',
-   '2' => 'Doe',
-   '3' => 'Smith'
+var_dump($countries->insert([
+   'id' => 'MA',
+   'country_name' => 'Morocco',
+   'currebcy_name' => 'MAD'
 ]));
 
 //var_dump($users->get(1));
