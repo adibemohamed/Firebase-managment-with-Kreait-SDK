@@ -1,5 +1,9 @@
 <?php
 
+
+
+
+
 require_once './vendor/autoload.php';
 
 use Kreait\Firebase\Factory;
@@ -13,9 +17,10 @@ class Users {
 
     public function __construct() {
         $account = (new Factory)->withServiceAccount(__DIR__.'/secret/fir-php-a5f3d-2209614f8194.json');
-        $firebase = $account->createDatabase();
+        // $firebase = $account->createDatabase();
+        $this->database =   $account->createDatabase();
 
-        $this->database = $firebase->getDatabase();
+        // $this->database = $firebase->getDatabase();
     }
 
     public function get(int $userID = NULL){
@@ -49,3 +54,20 @@ class Users {
         }
     }
 }
+
+
+$users = new Users();
+
+var_dump($users->insert([
+   '1' => 'John',
+   '2' => 'Doe',
+   '3' => 'Smith'
+]));
+
+//var_dump($users->get(1));
+
+//var_dump($users->delete(2));
+
+// var_dump($users->insert([
+//     '1' => 'John Doe',
+// ]));
